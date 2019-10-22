@@ -36,4 +36,9 @@ public class LocalDateDeserializer extends JsonDeserializer<LocalDate> {
     public LocalDate deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         return Instant.ofEpochMilli(Long.valueOf(jsonParser.getText())).atZone(CURRENT_ZONE_OFFSET).toLocalDate();
     }
+
+    public static void main(String[] args) {
+        Long l = 1571673600000L;
+        System.out.println(Instant.ofEpochMilli(l).atZone(CURRENT_ZONE_OFFSET).toLocalDate());
+    }
 }
