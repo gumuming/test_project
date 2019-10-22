@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
  *
  * @author zhangquanli
  */
-@Configuration
+//@Configuration
 public class LocalDateTimeToStringConfig {
 
     /**
